@@ -1,4 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<h1><%= @car.make %> <%= @car.modelname %></h1>
+<h2>Color: <%= @car.color %></h2>
+
 <%= link_to 'Edit', edit_car_path(@car) %> |
 <%= link_to 'Back', cars_path %>

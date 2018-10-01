@@ -1,4 +1,17 @@
 <%= form_with(model: car, local: true) do |form| %>
+  <div>
+    <%= form.label :make %>
+    <%= form.text_field :make %>
+  </div>
+  <div>
+    <%= form.label :model %>
+    <%= form.text_field :modelname %>
+  </div>
+  <div>
+    <%= form.label :color %>
+    <%= form.text_field :color %>
+  </div>
+
   <% if car.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(car.errors.count, "error") %> prohibited this car from being saved:</h2>
