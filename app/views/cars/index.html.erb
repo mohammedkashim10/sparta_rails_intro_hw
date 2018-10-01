@@ -11,11 +11,12 @@
 
   <tbody>
     <% @cars.each do |car| %>
-      <tr>
-        <td><%= link_to 'Show', car %></td>
-        <td><%= link_to 'Edit', edit_car_path(car) %></td>
-        <td><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <h1><%= car.make %></h1>
+      <h2><%= car.modelname %></h2>
+      <h3><%= car.color %></h3>
+      <h5><%= link_to 'Show', car %></h5>
+      <h5><%= link_to 'Edit', edit_car_path(car) %></h5>
+      <h5><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></h5>
     <% end %>
   </tbody>
 </table>
